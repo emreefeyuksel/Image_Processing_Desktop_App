@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-  <img src="screenshot.jpg" alt="Image Processing App Interface" width="100%">
+  <img src="screenshot.png" alt="Image Processing App Interface" width="100%">
 </p>
 
 <p align="center">
