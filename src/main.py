@@ -237,7 +237,7 @@ class ImageProcessorApp:
         notebook.add(tab_hist_morph, text="Hist / Morph")
         self.create_hist_morph_features(tab_hist_morph)
 
-    # Implementasyon fonksiyonları (Tümü artık sınıf içinde)
+    # Implementasyon fonksiyonları
     def apply_operation(self, operation_func, *args, **kwargs):
         global current_image_bgr
         if current_image_bgr is None:
@@ -380,7 +380,7 @@ class ImageProcessorApp:
         ttk.Label(intensity_frame, text="Contrast Factor (α):").pack(pady=5)
         self.contrast_scale = ttk.Scale(intensity_frame, from_=0.5, to=3.0, orient=tk.HORIZONTAL,
                                         command=self.update_contrast_label)
-        self.contrast_scale.set(1.0)  # Varsayılan 1.0 (değişiklik yok)
+        self.contrast_scale.set(1.0)  # Varsayılan 1.0
         self.contrast_scale.pack(fill="x", pady=2)
         self.contrast_label = ttk.Label(intensity_frame, text=f"α: 1.00")
         self.contrast_label.pack(pady=2)
@@ -388,7 +388,7 @@ class ImageProcessorApp:
         ttk.Button(intensity_frame, text="Apply Contrast", command=self.op_apply_contrast).pack(fill="x", pady=5)
         # --- KONTRAST SLIDERI SONU ---
 
-        # Gamma Düzeltme Kaydırıcısı (Zaten mevcut)
+        # Gamma Düzeltme Kaydırıcısı
         ttk.Label(intensity_frame, text="Gamma Correction (γ):").pack(pady=5)
         self.gamma_scale = ttk.Scale(intensity_frame, from_=0.1, to=5.0, orient=tk.HORIZONTAL,
                                      command=self.update_gamma_label)
@@ -700,4 +700,5 @@ class ImageProcessorApp:
 if __name__ == "__main__":
     root = ThemedTk()
     app = ImageProcessorApp(root)
+
     root.mainloop()
